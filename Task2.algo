@@ -1,0 +1,31 @@
+ALGORITHM Location
+VAR 
+    CONST  r1 := 0.7 , r2 := 0.4 ,r3 := 0.2 , p_d := 100 ; ins := 100 , VAT :=0.18 ; 
+    nb_days, kilometrage , sum1 :=0, sum2 :=0 : INTEGER ; 
+    
+BEGIN 
+    Read (nb_days,kilometrage) ;
+    // Calcul suivant kilometrage  1500 KM
+    IF kilometrage <= 100 THEN
+        sum1 := (r1 * kilometrage)  + VAT ;
+    ELSE IF (kilometrage >= 101 or kilometrage >= 1000) THEN 
+        kilomt_restant := kilometrage -100
+        sum1 := (r1 * 100-) + (r2 * kilomt_restant -)  + VAT ;
+    
+    ELSE 
+        kilomt_restant := kilometrage -1000
+        sum1 := (r1 * 100-) + (r2 * 900 -)+ (r3 * kilomt_restant -)  + VAT + ins*nb_days ; 
+    END_IF 
+
+    // Calcul Par jour 
+    IF nb_days <> 0
+        sum2 :=  (nb_days * p_d) + (ins * p_d) + VAT ;
+    END_IF
+
+    Write (sum1 , sum2);
+    IF (sum1 > sum2) THEN
+        Write("location par jour est plus favorable");
+    ELSE
+        Write("location par kilometrage est plus favorable");
+    END_IF
+END

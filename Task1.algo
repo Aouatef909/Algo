@@ -1,0 +1,12 @@
+ALGORITHM Permutation 
+VAR 
+    X , Y , Z , Aux : INTEGER ; 
+BEGIN
+    Read (x,y,z) ; 
+    Aux : = X ;
+    X   := Y ; 
+    Y   := Z ;
+    Z   := Aux ; 
+
+    write (X,Y,Z,Aux) ;
+END 

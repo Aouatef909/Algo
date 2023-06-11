@@ -1,0 +1,27 @@
+ALGORITHM Sentence_count
+VAR
+  count1 , count2, count3 , i : INTEGER ; 
+  sentence : String [30] ;
+BEGIN
+    Read (sentence);
+    // we are going to count the words in the sentences 
+    // 'Keep practicing until you succeed. '
+
+    count1 := 0 ; // counter for the words 
+    count2 := 0 ; // counter for the vowels
+    for i from 0 to sentences.lenght-1 do
+        if sentences[i] = '' then 
+            count1 +:= 1 ;
+        end_if
+        if sentences[i] in ('A','E','I','O','U','a','e','i','o','u') then
+            count2 +:= 1 ;
+        end_if
+    end_for
+
+    write ('this sentences contains '&(count1)&' words') ; 
+    write ('And it has '&(count2)&' Vowels' ) ; 
+
+
+END
+
+ // I didn't understand what is the role for the counter 3 because in the task we have just 2 things to count  ??? 

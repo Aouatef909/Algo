@@ -1,0 +1,46 @@
+Algorithm Sum_Arrays
+VAR
+ Const Set1 := [3,1,7,9] ;    // we create 2 elements ( arrays )
+ Const Set2 := [2,4,1,9,3] ; 
+ Sum , i,j : INTEGER ; 
+ Begin 
+ Sum := 0 ; 
+ 
+ for i from 0 to set1.lenght-1 do 
+    for j from 0 to set2.lenght-1 do
+        if  i = set2[j]
+            trouve := true ;  
+            break ;
+        else 
+            trouve = false ;
+        end_if
+    end_for
+    if trouve = false then 
+        sum +:= i
+    end_if 
+end_for
+ // Sum = 7 
+
+for i from 0 to set2.lenght-1 do 
+    for j from 0 to set1.lenght-1 do
+        if  i = set1[j]
+            trouve := true ;  
+            break ;
+        else 
+            trouve = false ;
+        end_if
+    end_for
+    if trouve = false then 
+        sum +:= i
+    end_if 
+end_for
+
+// Sum = 7+2+4 
+
+Write ('Sum equals '&(Sum))
+
+
+
+
+
+ END

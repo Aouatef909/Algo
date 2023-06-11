@@ -1,0 +1,72 @@
+ALGORITHM String_Date
+VAR 
+    Str : String [11] ; 
+    num : INTEGER ; 
+    day,month,year : INTEGER ;
+BEGIN
+    Read(num); 
+    day := num / 10000 ; 
+    month :=  (num % 10000) / 100 ;
+    year := (num % 10000) % 100
+    IF day > 32 or month > 12 THEN 
+        write ('Date invalide') ;
+    END_IF
+
+    SWITCH (month) DO
+        case 1 :
+         month_str := 'Javier' ;
+         
+         break ;
+        case 2 :
+         month_str := 'Fevrier' ;
+         IF day > 29 
+            write ('jour invalide');
+         END_IF
+         break ;
+         case 3 :
+         month_str := 'Mars' ;
+         break ;
+         case 4 :
+         month_str := 'Avril' ;
+         IF day > 30 
+            write ('jour invalide');
+         END_IF
+         break ;
+         case 5 :
+         month_str := 'May' ;
+         break ;
+         case 6 :
+         month_str := 'Juin' ;
+         IF day > 30 
+            write ('jour invalide');
+         END_IF
+         break ;
+         case 7 :
+         month_str := 'Juillet' ;
+         break ;
+         case 8 :
+         month_str := 'Aout' ;
+         break ;
+         case 9 :
+         month_str := 'Septembre' ;
+         IF day > 30 
+            write ('jour invalide');
+         END_IF
+         break ;
+         case 10 :
+         month_str := 'Octobre' ;
+         break ;
+         case 11 :
+         month_str := 'Novembre' ;
+         IF day > 30 
+            write ('jour invalide');
+         END_IF
+         break ;
+         case 12 :
+         month_str := 'Decembre' ;
+         break ;
+    END_SWITCH
+
+    write (day , month_str , year)
+
+
